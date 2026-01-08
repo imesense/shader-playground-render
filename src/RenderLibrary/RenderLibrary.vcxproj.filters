@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="StdAfx.cpp" />
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="FpsCounter.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="Buffer.cpp" />
+    <ClCompile Include="Frustum.cpp" />
+    <ClCompile Include="RenderState.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Render.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="DepthShader.cpp" />
+    <ClCompile Include="ShadowShader.cpp" />
+    <ClCompile Include="RenderTarget.cpp" />
+    <ClCompile Include="DX11ViewRender.cpp" />
+    <ClCompile Include="InputBinder.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="Exports.cpp" />
+    <ClCompile Include="FabricRender.cpp" />
+    <ClCompile Include="FabricDirectXWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.hpp" />
+    <ClInclude Include="Helpers.hpp" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="InputCodes.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="InputListener.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="InputBinder.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="FpsCounter.hpp" />
+    <ClInclude Include="Timer.hpp" />
+    <ClInclude Include="Window.hpp" />
+    <ClInclude Include="Buffer.hpp" />
+    <ClInclude Include="Frustum.hpp" />
+    <ClInclude Include="RenderState.hpp" />
+    <ClInclude Include="Shader.hpp" />
+    <ClInclude Include="Render.hpp" />
+    <ClInclude Include="Camera.hpp" />
+    <ClInclude Include="Light.hpp" />
+    <ClInclude Include="DepthShader.hpp" />
+    <ClInclude Include="DX11ViewRender.hpp" />
+    <ClInclude Include="ShadowShader.hpp" />
+    <ClInclude Include="RenderTarget.hpp" />
+    <ClInclude Include="Memory.hpp" />
+    <ClInclude Include="Utils.hpp" />
+    <ClInclude Include="Exports.hpp" />
+    <ClInclude Include="FabricRender.hpp" />
+    <ClInclude Include="FabricDirectXWindow.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Input">
+      <UniqueIdentifier>{c8a86576-97f8-447d-bf96-a32a019a3d69}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="depth.ps" />
+    <CopyFileToFolders Include="depth.vs" />
+    <CopyFileToFolders Include="ice.jpg" />
+    <CopyFileToFolders Include="shadow.ps" />
+    <CopyFileToFolders Include="shadow.vs" />
+    <CopyFileToFolders Include="wall01.jpg" />
+    <CopyFileToFolders Include="stone01.jpg" />
+  </ItemGroup>
+</Project>

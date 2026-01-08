@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         ToolsVersion="4.0">
+    <PropertyGroup>
+        <Render-RootPath>$(MSBuildThisFileDirectory)\..\..</Render-RootPath>
+        <Render-BinPath>$(Render-RootPath)\runtimes\win-$(NuGetPlatform)\native\Release\</Render-BinPath>
+        <Render-ResPath>$(Render-RootPath)\res\</Render-ResPath>
+    </PropertyGroup>
+
+    <!-- win-x86 -->
+    <ItemGroup>
+        <None Include="$(Render-BinPath)\RenderLibrary.dll"
+              Condition="'$(PlatformTarget)' == 'x86' OR ('$(PlatformTarget)' == 'AnyCPU' AND '$(Prefer32Bit)' == 'true')">
+            <Link>RenderLibrary.dll</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Visible>false</Visible>
+        </None>
+    </ItemGroup>
+
+    <!-- win-x64 -->
+    <ItemGroup>
+        <None Include="$(Render-BinPath)\RenderLibrary.dll"
+              Condition="'$(PlatformTarget)' == 'x64' OR ('$(PlatformTarget)' == 'AnyCPU' AND '$(Prefer32Bit)' != 'false')">
+            <Link>RenderLibrary.dll</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Visible>false</Visible>
+        </None>
+    </ItemGroup>
+
+    <Target Name="PostBuildScript" AfterTargets="Build">
+        <Copy SourceFiles="$(Render-ResPath)\ice.jpg" DestinationFolder="$(TargetDir)" />
+        <Copy SourceFiles="$(Render-ResPath)\stone01.jpg" DestinationFolder="$(TargetDir)" />
+        <Copy SourceFiles="$(Render-ResPath)\wall01.jpg" DestinationFolder="$(TargetDir)" />
+
+        <Copy SourceFiles="$(Render-ResPath)\depth.ps" DestinationFolder="$(TargetDir)" />
+        <Copy SourceFiles="$(Render-ResPath)\depth.vs" DestinationFolder="$(TargetDir)" />
+
+        <Copy SourceFiles="$(Render-ResPath)\shadow.ps" DestinationFolder="$(TargetDir)" />
+        <Copy SourceFiles="$(Render-ResPath)\shadow.vs" DestinationFolder="$(TargetDir)" />
+    </Target>
+</Project>

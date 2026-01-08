@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         ToolsVersion="4.0">
+    <PropertyGroup Label="Debug" Condition="'$(Configuration.ToLower())' == 'debug'">
+        <NuGetConfiguration>Debug</NuGetConfiguration>
+    </PropertyGroup>
+    <PropertyGroup Label="Non_Debug" Condition="'$(Configuration.ToLower())' == 'release'">
+        <NuGetConfiguration>Release</NuGetConfiguration>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(NuGetConfiguration)' == ''">
+        <NuGetConfiguration>Release</NuGetConfiguration>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Platform)' == 'Win32' Or '$(Platform)' == 'x86'">
+        <NuGetPlatform>x86</NuGetPlatform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Platform)' == 'x64'">
+        <NuGetPlatform>x64</NuGetPlatform>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Render-RootPath>$(MSBuildThisFileDirectory)\..\..</Render-RootPath>
+        <Render-BinPath>$(Render-RootPath)\runtimes\win-$(NuGetPlatform)\native\$(NuGetConfiguration)\</Render-BinPath>
+        <Render-LibPath>$(Render-RootPath)\lib\win-$(NuGetPlatform)\native\$(NuGetConfiguration)\</Render-LibPath>
+        <Render-IncPath>$(Render-RootPath)\include\</Render-IncPath>
+        <Render-ResPath>$(Render-RootPath)\res\</Render-ResPath>
+    </PropertyGroup>
+
+    <ItemDefinitionGroup>
+        <ClCompile>
+            <AdditionalIncludeDirectories>$(Render-IncPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+        </ClCompile>
+
+        <Link>
+            <AdditionalLibraryDirectories>$(Render-LibPath);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+            <AdditionalDependencies>RenderLibrary.lib;%(AdditionalDependencies)</AdditionalDependencies>
+        </Link>
+    </ItemDefinitionGroup>
+
+    <ItemGroup>
+        <ReferenceCopyLocalPaths Include="$(Render-BinPath)\*.dll" />
+        <ReferenceCopyLocalPaths Include="$(Render-BinPath)\*.pdb" />
+    </ItemGroup>
+
+    <Target Name="PostBuildScript" AfterTargets="Build">
+        <Copy SourceFiles="$(Render-ResPath)\ice.jpg" DestinationFolder="$(TargetDir)" />
+        <Copy SourceFiles="$(Render-ResPath)\stone01.jpg" DestinationFolder="$(TargetDir)" />
+        <Copy SourceFiles="$(Render-ResPath)\wall01.jpg" DestinationFolder="$(TargetDir)" />
+
+        <Copy SourceFiles="$(Render-ResPath)\depth.ps" DestinationFolder="$(TargetDir)" />
+        <Copy SourceFiles="$(Render-ResPath)\depth.vs" DestinationFolder="$(TargetDir)" />
+
+        <Copy SourceFiles="$(Render-ResPath)\shadow.ps" DestinationFolder="$(TargetDir)" />
+        <Copy SourceFiles="$(Render-ResPath)\shadow.vs" DestinationFolder="$(TargetDir)" />
+    </Target>
+</Project>

@@ -32,6 +32,41 @@ indent_size = 4
 indent_style = space
 insert_final_newline = true
 
+# NuGet files
+[{NuGet,packages}.config]
+charset = utf-8
+end_of_line = crlf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+[*.nuspec]
+charset = utf-8
+end_of_line = crlf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# MSBuild files
+[*.sln]
+charset = utf-8-bom
+end_of_line = crlf
+indent_size = 4
+indent_style = tab
+insert_final_newline = true
+tab_width = 4
+[*.vcxproj]
+charset = utf-8
+end_of_line = crlf
+indent_size = 2
+indent_style = space
+insert_final_newline = false
+[*.{props,targets}]
+charset = utf-8
+end_of_line = crlf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
 # Visual Studio Code files
 [*.code-workspace]
 charset = utf-8
@@ -40,6 +75,22 @@ indent_size = 4
 indent_style = space
 insert_final_newline = true
 [.vscode/*.json]
+charset = utf-8
+end_of_line = crlf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# C and CPlusPlus files
+[*.{h,hpp,c,cpp}]
+charset = utf-8
+end_of_line = crlf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# HLSL files
+[*.{hlsl,hlsli}]
 charset = utf-8
 end_of_line = crlf
 indent_size = 4

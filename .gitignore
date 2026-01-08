@@ -3,3 +3,13 @@
 # System cache
 .DS_Store
 Thumbs.db
+
+# Visual Studio cache and settings
+.vs/
+pkg/
+*.suo
+*.user
+
+# Build results
+bin/
+obj/
