@@ -12,3 +12,10 @@
 .gitattributes text eol=lf encoding=utf-8
 .gitignore text eol=lf encoding=utf-8
 .mailmap text eol=lf encoding=utf-8
+
+# EditorConfig files
+.editorconfig text eol=crlf encoding=utf-8
+
+# Visual Studio Code files
+*.code-workspace text eol=crlf encoding=utf-8
+.vscode/*.json text eol=crlf encoding=utf-8
