@@ -4,5 +4,18 @@
             "name": "Shader Playground Render",
             "path": "."
         }
-    ]
+    ],
+
+    "settings": {
+        "files.associations": {
+            "*.rc": "rc-script",
+            "*.rc.in": "rc-script"
+        }
+    },
+
+    "extensions": {
+        "recommendations": [
+            "willasm.rc-script"
+        ]
+    }
 }

@@ -1,2 +1,6 @@
 {
+    "files.associations": {
+        "*.rc": "rc-script",
+        "*.rc.in": "rc-script"
+    }
 }
