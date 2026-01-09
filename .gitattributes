@@ -16,6 +16,10 @@
 # EditorConfig files
 .editorconfig text eol=crlf encoding=utf-8
 
+# CMake files
+*.cmake text eol=crlf encoding=utf-8
+CMakeLists.txt text eol=crlf encoding=utf-8
+
 # NuGet files
 NuGet.config text eol=crlf encoding=utf-8
 packages.config text eol=crlf encoding=utf-8
@@ -36,6 +40,10 @@ packages.config text eol=crlf encoding=utf-8
 *.hpp text eol=crlf encoding=utf-8
 *.c text eol=crlf encoding=utf-8
 *.cpp text eol=crlf encoding=utf-8
+
+# Resource Script files
+*.rc text eol=crlf encoding=utf-8
+*.rc.in text eol=crlf encoding=utf-8
 
 # HLSL files
 *.hlsl text eol=crlf encoding=utf-8

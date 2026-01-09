@@ -32,6 +32,20 @@ indent_size = 4
 indent_style = space
 insert_final_newline = true
 
+# CMake files
+[*.cmake]
+charset = utf-8
+end_of_line = crlf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+[CMakeLists.txt]
+charset = utf-8
+end_of_line = crlf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
 # NuGet files
 [{NuGet,packages}.config]
 charset = utf-8
@@ -83,6 +97,14 @@ insert_final_newline = true
 
 # C and CPlusPlus files
 [*.{h,hpp,c,cpp}]
+charset = utf-8
+end_of_line = crlf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# Resource Script files
+[*.{rc,rc.in}]
 charset = utf-8
 end_of_line = crlf
 indent_size = 4

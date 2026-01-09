@@ -11,5 +11,6 @@ pkg/
 *.user
 
 # Build results
+build/
 bin/
 obj/
