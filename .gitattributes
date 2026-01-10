@@ -28,6 +28,7 @@ packages.config text eol=crlf encoding=utf-8
 # MSBuild files
 *.sln text eol=crlf encoding=utf-8-bom
 *.vcxproj text eol=crlf encoding=utf-8
+*.filters text eol=crlf encoding=utf-8
 *.props text eol=crlf encoding=utf-8
 *.targets text eol=crlf encoding=utf-8
 

@@ -4,7 +4,7 @@ project(RenderDirectX2DShaders
 )
 
 add_custom_command(
-    COMMAND ${FXC_EXECUTABLE}
+    COMMAND ${FXC_COMMAND}
         /nologo
         /E main
         /T cs_5_0
@@ -19,7 +19,7 @@ add_custom_command(
     VERBATIM
 )
 add_custom_command(
-    COMMAND ${FXC_EXECUTABLE}
+    COMMAND ${FXC_COMMAND}
         /nologo
         /E main
         /T ps_5_0
@@ -33,7 +33,7 @@ add_custom_command(
     VERBATIM
 )
 add_custom_command(
-    COMMAND ${FXC_EXECUTABLE}
+    COMMAND ${FXC_COMMAND}
         /nologo
         /E main
         /T vs_5_0
