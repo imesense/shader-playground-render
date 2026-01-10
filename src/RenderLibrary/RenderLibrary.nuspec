@@ -6,7 +6,7 @@
         <title>ImeSense.ShaderPlayground.Render</title>
         <authors>acidicMercury8</authors>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
-        <license type="file">LICENSE</license>
+        <license type="file">LICENSE.txt</license>
         <readme>README.md</readme>
         <projectUrl>https://github.com/imesense/shader-playground</projectUrl>
         <repository type="git" url="https://github.com/imesense/shader-playground" />
@@ -24,27 +24,23 @@
 
     <files>
         <file src="..\..\README.md" target="README.md" />
-        <file src="..\..\LICENSE" target="LICENSE" />
+        <file src="..\..\LICENSE.txt" target="LICENSE.txt" />
 
-        <file src="..\..\bin\Win32\Debug\*.dll" target="runtimes\win-x86\native\Debug\" />
-        <file src="..\..\bin\Win32\Debug\*.pdb" target="runtimes\win-x86\native\Debug\" />
-        <file src="..\..\bin\Win32\Release\*.dll" target="runtimes\win-x86\native\Release\" />
-        <file src="..\..\bin\Win32\Release\*.pdb" target="runtimes\win-x86\native\Release\" />
+        <file src="..\..\build\Win32\bin\Debug\*.dll" target="runtimes\win-x86\native\Debug\" />
+        <file src="..\..\build\Win32\bin\Debug\*.pdb" target="runtimes\win-x86\native\Debug\" />
+        <file src="..\..\build\Win32\bin\RelWithDebInfo\*.dll" target="runtimes\win-x86\native\Release\" />
+        <file src="..\..\build\Win32\bin\RelWithDebInfo\*.pdb" target="runtimes\win-x86\native\Release\" />
 
-        <file src="..\..\bin\x64\Debug\*.dll" target="runtimes\win-x64\native\Debug\" />
-        <file src="..\..\bin\x64\Debug\*.pdb" target="runtimes\win-x64\native\Debug\" />
-        <file src="..\..\bin\x64\Release\*.dll" target="runtimes\win-x64\native\Release\" />
-        <file src="..\..\bin\x64\Release\*.pdb" target="runtimes\win-x64\native\Release\" />
+        <file src="..\..\build\x64\bin\Debug\*.dll" target="runtimes\win-x64\native\Debug\" />
+        <file src="..\..\build\x64\bin\Debug\*.pdb" target="runtimes\win-x64\native\Debug\" />
+        <file src="..\..\build\x64\bin\RelWithDebInfo\*.dll" target="runtimes\win-x64\native\Release\" />
+        <file src="..\..\build\x64\bin\RelWithDebInfo\*.pdb" target="runtimes\win-x64\native\Release\" />
 
-        <file src="..\..\bin\Win32\Debug\*.lib" target="lib\win-x86\native\Debug\" />
-        <file src="..\..\bin\Win32\Debug\*.exp" target="lib\win-x86\native\Debug\" />
-        <file src="..\..\bin\Win32\Release\*.lib" target="lib\win-x86\native\Release\" />
-        <file src="..\..\bin\Win32\Release\*.exp" target="lib\win-x86\native\Release\" />
+        <file src="..\..\build\Win32\bin\Debug\*.lib" target="lib\win-x86\native\Debug\" />
+        <file src="..\..\build\Win32\bin\RelWithDebInfo\*.lib" target="lib\win-x86\native\Release\" />
 
-        <file src="..\..\bin\x64\Debug\*.lib" target="lib\win-x64\native\Debug\" />
-        <file src="..\..\bin\x64\Debug\*.exp" target="lib\win-x64\native\Debug\" />
-        <file src="..\..\bin\x64\Release\*.lib" target="lib\win-x64\native\Release\" />
-        <file src="..\..\bin\x64\Release\*.exp" target="lib\win-x64\native\Release\" />
+        <file src="..\..\build\x64\bin\Debug\*.lib" target="lib\win-x64\native\Debug\" />
+        <file src="..\..\build\x64\bin\RelWithDebInfo\*.lib" target="lib\win-x64\native\Release\" />
 
         <file src="*.jpg" target="res\" />
         <file src="*.vs" target="res\" />
